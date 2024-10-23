@@ -1,7 +1,7 @@
 import { createContext, useState, useMemo } from 'react'
 import { createTheme } from '@mui/material/styles'
 
-// color design tokens - command k + command g to create shades of colors VS Tailwind Shades Extension
+// color design tokens export
 export const tokens = (mode) => ({
   ...(mode === 'dark'
     ? {
@@ -20,23 +20,12 @@ export const tokens = (mode) => ({
           100: '#d0d1d5',
           200: '#a1a4ab',
           300: '#727681',
-          400: '#434957',
+          400: '#1F2A40',
           500: '#141b2d',
           600: '#101624',
           700: '#0c101b',
           800: '#080b12',
           900: '#040509',
-        },
-        redAccent: {
-          100: '#f8dcdb',
-          200: '#f1b9b7',
-          300: '#e99592',
-          400: '#e2726e',
-          500: '#db4f4a',
-          600: '#af3f3b',
-          700: '#832f2c',
-          800: '#58201e',
-          900: '#2c100f',
         },
         greenAccent: {
           100: '#dbf5ee',
@@ -48,6 +37,17 @@ export const tokens = (mode) => ({
           700: '#2e7c67',
           800: '#1e5245',
           900: '#0f2922',
+        },
+        redAccent: {
+          100: '#f8dcdb',
+          200: '#f1b9b7',
+          300: '#e99592',
+          400: '#e2726e',
+          500: '#db4f4a',
+          600: '#af3f3b',
+          700: '#832f2c',
+          800: '#58201e',
+          900: '#2c100f',
         },
         blueAccent: {
           100: '#e1e2fe',
@@ -77,23 +77,12 @@ export const tokens = (mode) => ({
           100: '#040509',
           200: '#080b12',
           300: '#0c101b',
-          400: '#f2f0f0',
+          400: '#f2f0f0', // manually changed
           500: '#141b2d',
-          600: '#434957',
+          600: '#1F2A40',
           700: '#727681',
           800: '#a1a4ab',
           900: '#d0d1d5',
-        },
-        redAccent: {
-          100: '#2c100f',
-          200: '#58201e',
-          300: '#832f2c',
-          400: '#af3f3b',
-          500: '#db4f4a',
-          600: '#e2726e',
-          700: '#e99592',
-          800: '#f1b9b7',
-          900: '#f8dcdb',
         },
         greenAccent: {
           100: '#0f2922',
@@ -105,6 +94,17 @@ export const tokens = (mode) => ({
           700: '#94e2cd',
           800: '#b7ebde',
           900: '#dbf5ee',
+        },
+        redAccent: {
+          100: '#2c100f',
+          200: '#58201e',
+          300: '#832f2c',
+          400: '#af3f3b',
+          500: '#db4f4a',
+          600: '#e2726e',
+          700: '#e99592',
+          800: '#f1b9b7',
+          900: '#f8dcdb',
         },
         blueAccent: {
           100: '#151632',
@@ -123,13 +123,12 @@ export const tokens = (mode) => ({
 // mui theme settings
 export const themeSettings = (mode) => {
   const colors = tokens(mode)
-
   return {
     palette: {
       mode: mode,
-      ...(mode === ' dark'
+      ...(mode === 'dark'
         ? {
-            // dark mode
+            // palette values for dark mode
             primary: {
               main: colors.primary[500],
             },
@@ -146,9 +145,9 @@ export const themeSettings = (mode) => {
             },
           }
         : {
-            // light mode
+            // palette values for light mode
             primary: {
-              main: colors.primary[500],
+              main: colors.primary[100],
             },
             secondary: {
               main: colors.greenAccent[500],
@@ -164,30 +163,30 @@ export const themeSettings = (mode) => {
           }),
     },
     typography: {
-      fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+      fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
       fontSize: 12,
       h1: {
-        fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+        fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
         fontSize: 40,
       },
       h2: {
-        fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+        fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
         fontSize: 32,
       },
       h3: {
-        fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+        fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
         fontSize: 24,
       },
       h4: {
-        fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+        fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
         fontSize: 20,
       },
       h5: {
-        fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+        fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
         fontSize: 16,
       },
       h6: {
-        fontFamily: ['Source Sans 3', 'sans-serif'].join(','),
+        fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
         fontSize: 14,
       },
     },
