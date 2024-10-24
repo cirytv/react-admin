@@ -107,7 +107,7 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: '10px 0 0 0' }}
                 >
-                  Gael
+                  Mr. Pickles
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
                   Fancy Role
@@ -130,25 +130,32 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: '15px 0 5px 20px' }}
             >
-              Data
+              Reportes
             </Typography>
             <Item
-              title="Manage Team"
-              to="/team"
+              title="Empresarios"
+              to="/empresarios"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Contacts Information"
-              to="/contacts"
+              title="Empresas"
+              to="/empresas"
+              icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Sucursales"
+              to="/sucursales"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
-              to="/invoices"
+              title="Eventos"
+              to="/eventos"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -159,62 +166,34 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: '15px 0 5px 20px' }}
             >
-              Pages
+              Formularios
             </Typography>
             <Item
-              title="Profile Form"
-              to="/form"
+              title="Empresarios - Formulario"
+              to="/form/empresarios"
+              icon={<HelpOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Empresas - Formulario"
+              to="/form/empresas"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
-              to="/calendar"
+              title="Sucursales - Formulario"
+              to="/form/sucursales"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
-              title="FAQ Page"
-              to="/faq"
-              icon={<HelpOutlineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: '15px 0 5px 20px' }}
-            >
-              Charts
-            </Typography>
             <Item
-              title="Bar Chart"
-              to="/bar"
-              icon={<BarChartOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Pie Chart"
-              to="/pie"
-              icon={<PieChartOutlineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Line Chart"
-              to="/line"
-              icon={<TimelineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Geography Chart"
-              to="/geography"
-              icon={<MapOutlinedIcon />}
+              title="Eventos - Formulario"
+              to="/form/eventos"
+              icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
